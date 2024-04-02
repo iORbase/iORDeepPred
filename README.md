@@ -54,6 +54,7 @@ You can review the specific meanings of each parameter, and then users can add c
 
 ### 2.Train the model using experimental data
 （1）Organize the experimental data into CSV format files, where OR, VOC, and their interaction relationships are saved as seq.csv, voc.csv, and inter.csv respectively. Please refer to the example files in the csv_file directory for the specific format of CSV files.
+
 （2）Preprocess the experimental data to transform it into a format suitable for model reading. Use the data preprocessing module of iORDeepPred:
 
 `python iORDeepPred.py -d`
@@ -65,6 +66,7 @@ You can review the specific meanings of each parameter, and then users can add c
 
 ### 3.Utilize the trained model to predict the interaction relationships for the target OR-VOC pairs
 （1）Input data processing. All operations are consistent with steps (1) and (2) in the previous training model. It is worth noting that whether for training or prediction, the format of the input data files is exactly the same. The difference lies in: during training, inter.csv needs to contain OR-VOC pairs and the strength of their interactions; during prediction, the inter.csv file only provides the OR-VOC pairs that need to be predicted.
+
 （2）Predict the target OR-VOC pairs using the functional prediction module of iORDeepPred：
 
 `python iORDeepPred.py -p`
