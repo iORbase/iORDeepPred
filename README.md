@@ -4,9 +4,13 @@
 iORDeepPred is a deep learning model designed for predicting the functionality of insect olfactory receptors. It enables rapid and efficient batch prediction of the interaction between insect olfactory receptors and VOCs (volatile organic compounds). We provide a pre-trained model on large-scale molecular docking data, allowing users to perform transfer learning based on existing experimental data to obtain efficient models for predicting the functionality of insect olfactory receptors. For more detailed information on iORDeepPred, please refer to: "**Functional Prediction of Insect Olfactory Receptors Using Multi-transfer Learning from Virtual Screening to Experiments**" (to be published).
 
 ## Dependence
+
 `h5py==3.6.0`
+
 `numpy==1.21.5`
+
 `pandas==1.3.5`
+
 `pytorch_lightning==1.6.4`
 `scikit_learn==1.4.1.post1`
 `torch==1.11.0`
