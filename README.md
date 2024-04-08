@@ -42,7 +42,7 @@ iORDeepPred is a deep learning model designed for predicting the functionality o
 **utils.py**: The relevant functions
 **utils_test.py**: The relevant functions
 
-Tips：The pretrained model file for feature extraction is too large. Currently, users need to download it themselves from [hugging_face](http://www.huggingface.co) and place it in the protT5 and Smodel directories.
+Tips：The pretrained model file for feature extraction is too large. Currently, users need to download it themselves from [hugging_face](https://huggingface.co/iORbase/iORDeepPred)) and place it in the protT5 and Smodel directories.
 
 ## Usage
 ### 1.Parameter configuration
