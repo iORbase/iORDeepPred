@@ -30,8 +30,8 @@ class Protein_preprocessing():
         print('get model start')
         model = torch.load('./protT5/Pmodel.pth')
         # print('Using', torch.cuda.device_count(), 'GPUs!')
-        torch.cuda.set_device(1)
-        model = nn.DataParallel(model, device_ids=[1, 2, 3, 4, 5, 6, 7]).cuda()
+        torch.cuda.set_device(0)
+        model = nn.DataParallel(model, device_ids=[0]).cuda()
         # model = model.to(device) # move model to GPU
         model = model.eval()  # set model to evaluation model
         tokenizer = torch.load("./protT5/Ptokenizer.pth")
@@ -95,11 +95,11 @@ class Protein_preprocessing():
                 seq_ids, seqs, seq_lens = zip(*batch)
                 batch = list()
 
-                g_num = gpu_num % 6
+                #g_num = gpu_num % 3
 
-                device = 'cuda:' + str(g_num + 2)
+                device = 'cuda:' + str(0)
                 print('Using {}'.format(device))
-                gpu_num += 1
+                #gpu_num += 1
 
                 token_encoding = tokenizer.batch_encode_plus(seqs, add_special_tokens=True, padding="longest")
                 input_ids = torch.tensor(token_encoding['input_ids']).to(device)

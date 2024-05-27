@@ -12,7 +12,7 @@ seed = 1234
 model_type = 'dnn'
 
 epochs_max = 50
-gpus = [7]
+gpus = [0]
 
 patience = 5                  # 学习率裁剪的epoch数
 

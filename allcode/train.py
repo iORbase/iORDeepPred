@@ -17,7 +17,7 @@ import config
 def train(data_path,flag,ckpt_name,load_model):
     x = np.load(data_path,allow_pickle=True)
     
-    data_tr, data_val = train_test_split(x, test_size=0.001, random_state=config.seed)
+    data_tr, data_val = train_test_split(x, test_size=0.1, random_state=config.seed)
     
     num_tr = len(data_tr)
     num_val = len(data_val)
