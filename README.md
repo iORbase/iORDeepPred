@@ -24,22 +24,39 @@ iORDeepPred is a deep learning model designed for predicting the functionality o
 
 ## Project Structure
 **csv_file**: CSV format file for input
+
 **output**: In the data preprocessing process, store intermediate files
+
 **protT5**: Pretrained models used for OR feature extraction storage
+
 **Smodel**: Pretrained models used for VOC feature extraction storage
+
 **space**: Store trained models
+
 **all_script**: The relevant functions for data preprocessing
+
 **config.py**: The configuration file of the model
+
 **input_data.npy**: The processed data file
+
 **iORDeepPred.py**: The main file
+
 **model.py**: The model definition file
+
 **model_test.py**: The model definition file
+
 **requirements.txt**: The environment dependency file
+
 **test.csv**: The predicted results
+
 **test.py**: The functions related to the prediction module
+
 **train.py**: The functions related to the training module
+
 **train_test.py**: The relevant functions
+
 **utils.py**: The relevant functions
+
 **utils_test.py**: The relevant functions
 
 Tips：The pretrained model file for feature extraction is too large. Currently, users need to download it themselves from [hugging_face](https://huggingface.co/iORbase/iORDeepPred)) and place it in the protT5 and Smodel directories.
